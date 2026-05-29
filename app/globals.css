@@ -1,0 +1,214 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+.tagline {
+  max-width: 900px;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+h1 span {
+  background: linear-gradient(90deg, #e45427, #ff0ac9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 10px;
+}
+.hero__content {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero img {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 150px;
+  border-radius: 18px;
+  box-shadow: #000 0px 0px 30px 5px;
+}
+.button__container {
+  background: linear-gradient(135deg, #e45427, #ff0ac9);
+  padding: 2px;
+  width: fit-content;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: #000 0px 0px 30px 5px;
+  margin: 30px 0px;
+}
+button {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.button__container:hover button {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  animation: button-shadow-change 3s infinite ease-in-out;
+}
+.form {
+  background-color: #121212;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -100;
+  text-align: center;
+  padding: 10px;
+}
+.form.shown {
+  opacity: 1;
+  z-index: 100;
+}
+.formHeading {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+.formSubheading {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+input {
+  background: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 10px 0px;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: #fff;
+}
+p.error {
+  color: #ff0000;
+}
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s;
+}
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  opacity: 0.7;
+}
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.preloader.active {
+  z-index: 1000;
+  opacity: 1;
+}
+.preloader img {
+  width: 100%;
+  max-width: 400px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+section {
+  padding: 100px 0px;
+}
+.loader {
+  width: 90px;
+  height: 14px;
+  --c: #fff 82%, #0000;
+  background:
+    radial-gradient(circle 7px at bottom, var(--c)) 0 0,
+    radial-gradient(circle 7px at top, var(--c)) 0 100%;
+  background-size: calc(100% / 4) 50%;
+  background-repeat: repeat-x;
+  animation: l11 1s infinite;
+}
+@keyframes l11 {
+  80%,
+  100% {
+    background-position:
+      calc(100% / 3) 0,
+      calc(100% / -3) 100%;
+  }
+}
+.thank-you,
+.error-page {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.thank-you h1,
+.error-page h1 {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 900px) {
+  .hero img {
+    max-width: calc(100% - 20px);
+  }
+}
+@keyframes button-shadow-change {
+  0% {
+    box-shadow:
+      #e45427 -5px -5px 20px 1px,
+      #ff0ac9 5px 5px 20px 1px;
+  }
+  50% {
+    box-shadow:
+      #ff0ac9 -5px 0px 20px 1px,
+      #e45427 5px 0px 20px 1px;
+  }
+  100% {
+    box-shadow:
+      #e45427 -5px -5px 20px 1px,
+      #ff0ac9 5px 5px 20px 1px;
+  }
+}
