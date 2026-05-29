@@ -15,11 +15,14 @@ h4,
 .tagline {
   max-width: 900px;
 }
-h1 {
+h1,
+h2 {
   font-size: 60px;
   font-weight: 900;
+  text-align: center;
 }
-h1 span {
+h1 span,
+h2 span {
   background: linear-gradient(90deg, #e45427, #ff0ac9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,6 +33,9 @@ h1 span {
   justify-content: center;
   text-align: center;
   padding: 0px 10px;
+}
+.hero h2 {
+  font-size: 24px;
 }
 .hero__content {
   margin-top: 200px;
@@ -157,7 +163,59 @@ footer {
   transition: all 0.5s;
 }
 section {
-  padding: 100px 0px;
+  padding: 200px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subheading {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 40px 0px;
+  opacity: 0.7;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+.card__container {
+  background: linear-gradient(
+    135deg,
+    rgba(249, 249, 249, 0.2),
+    rgba(249, 249, 249, 0.1)
+  );
+  padding: 1px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 350px;
+  margin: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.25);
+}
+.card__regular {
+  background-color: #1a1a1a;
+}
+.card__content {
+  border-radius: 30px;
+  padding: 50px;
+}
+.card__heading {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.card__desc {
+  opacity: 0.8;
+}
+.card__compare {
+  text-align: center;
+  padding-top: 250px;
+  position: relative;
 }
 .loader {
   width: 90px;
@@ -169,6 +227,9 @@ section {
   background-size: calc(100% / 4) 50%;
   background-repeat: repeat-x;
   animation: l11 1s infinite;
+}
+.card__klyfy {
+  background: linear-gradient(135deg, #e45427, #ff0ac9);
 }
 @keyframes l11 {
   80%,
