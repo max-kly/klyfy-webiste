@@ -11,6 +11,33 @@ export const metadata: Metadata = {
     "Klyfy - Business OS for agencies — not tools integrated, but one system that was never fragmented",
   description:
     "Klyfy is the Business OS for agencies. Only one system. Every business function native. Your SaaS stack is Windows — fragmented by design, held together with Zapier and hope. Klyfy is the Mac.",
+  openGraph: {
+    title:
+      "Klyfy - Business OS for agencies — not tools integrated, but one system that was never fragmented",
+    description:
+      "Klyfy is the Business OS for agencies. One system. No integrations. No fragmentation. Just native business operations.",
+    url: "https://klyfy.io",
+    siteName: "Klyfy",
+    images: [
+      {
+        url: "/media/og/index.png",
+        width: 1200,
+        height: 630,
+        alt: "Klyfy - Business Operating System",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Klyfy - Business OS for agencies — not tools integrated, but one system that was never fragmented",
+    description:
+      "Klyfy is the Business OS for agencies. One system. No integrations. No fragmentation.",
+    images: ["/media/og/index.png"],
+    creator: "",
+  },
 };
 export default function HomePage() {
   const [formActive, setFormActive] = useState(false);
